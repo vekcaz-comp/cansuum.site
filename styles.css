@@ -66,13 +66,6 @@ body, html {
     font-style: italic;
     margin-top: 20px;
   }
-  @keyframes smoothGradient {
-    0% { background: linear-gradient(120deg, #ff9a9e, #fad0c4); }
-    25% { background: linear-gradient(120deg, #fad0c4, #fbc2eb); }
-    50% { background: linear-gradient(120deg, #fbc2eb, #a18cd1); }
-    75% { background: linear-gradient(120deg, #a18cd1, #84fab0); }
-    100% { background: linear-gradient(120deg, #84fab0, #ff9a9e); }
-  }
-  
+
 
   
