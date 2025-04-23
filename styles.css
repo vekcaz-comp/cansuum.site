@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .splash {
+    text-align: center;
+  }
+  
+  /* Kalp */
+  .heart {
+    font-size: 4rem;
+    color: #e63946;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .heart:hover {
+    transform: scale(1.2);
+  }
+  
+  .content {
+    display: none;
+    text-align: center;
+  }
+  
+  /* Merhaba Aşkım yazısı için yeni font */
+  .brand-title-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Şerit Background */
+  .brand-title-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Yükseklik, şeritin yüksekliğini artırdık */
+    background-color: #ff6f61; /* Şerit rengi */
+    z-index: -1; /* Yazının arkası */
+  }
+  
+  .brand-title {
+    font-size: 5rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    padding: 0 20px;
+    line-height: 1.2; /* Satır aralığını biraz açtık */
+    z-index: 1; /* Yazıyı şeritten önde tutuyoruz */
+  }
+  
+  .slogan {
+    font-size: 1.5rem;
+    color: #333;
+    font-style: italic;
+    margin-top: 20px;
+  }
+  @keyframes smoothGradient {
+    0% { background: linear-gradient(120deg, #ff9a9e, #fad0c4); }
+    25% { background: linear-gradient(120deg, #fad0c4, #fbc2eb); }
+    50% { background: linear-gradient(120deg, #fbc2eb, #a18cd1); }
+    75% { background: linear-gradient(120deg, #a18cd1, #84fab0); }
+    100% { background: linear-gradient(120deg, #84fab0, #ff9a9e); }
+  }
+  
+  body {
+    animation: smoothGradient 30s ease infinite;
+    background-size: 400% 400%;
+  }
+  
+  
