@@ -3,7 +3,8 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #fafafa;
+    background-color: #716d6d;
+    color: #fafafa;
     display: flex;
     align-items: center;
     justify-content: center;
