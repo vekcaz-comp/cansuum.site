@@ -74,9 +74,5 @@ body, html {
     100% { background: linear-gradient(120deg, #84fab0, #ff9a9e); }
   }
   
-  body {
-    animation: smoothGradient 30s ease infinite;
-    background-size: 400% 400%;
-  }
-  
+
   
