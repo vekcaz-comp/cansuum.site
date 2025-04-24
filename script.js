@@ -1,14 +1,20 @@
-document.getElementById("heart").addEventListener("click", function() {
-  const splash = document.getElementById("splash");
-  const content = document.getElementById("content");
-  const music = document.getElementById("bgMusic");
+const heart = document.getElementById('heart');
+const splashText = document.getElementById('splashText');
+const music = document.getElementById('bg-music');
+const footer = document.getElementById('footer');
 
-  // splash'ı gizle, içeriği göster
-  splash.style.display = "none";
-  content.style.display = "block";
+heart.addEventListener('click', () => {
+  // Kalbi gizle
+  heart.style.display = 'none';
 
-  // müzik çal
-  music.play().catch(error => {
-    console.log("Müzik çalınamadı: ", error);
-  });
+  // Yazıyı göster
+  splashText.style.display = 'block';
+
+  // Müzik başlasın
+  music.muted = false; // mute aç
+  music.play(); // müziği başlat
+// Footer'ı göster
+footer.style.display = 'block';
 });
+
+
