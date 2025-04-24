@@ -1,3 +1,4 @@
+window.onload = () => {
 const heart = document.getElementById('heart');
 const splashText = document.getElementById('splashText');
 const music = document.getElementById('bg-music');
