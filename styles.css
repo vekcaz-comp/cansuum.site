@@ -1,88 +1,52 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #716d6d;
-    color: #fafafa;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .splash {
-  position: fixed;
-  top: 0;
-  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: white;
+}
+
+.splash {
   height: 100vh;
   width: 100vw;
-  background-color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
-  transition: opacity 1s ease;
+  background: rgba(78, 77, 77, 0.753);
 }
 
-  
-  /* Kalp */
-  .heart {
-    font-size: 4rem;
-    color: #e63946;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-      margin-right: 20px;
-  }
-  
-  .heart:hover {
-    transform: scale(1.2);
-  }
-  
-  .content {
-    display: none;
-    text-align: center;
-  }
-  
-  /* Merhaba Aşkım yazısı için yeni font */
-  .brand-title-container {
-    position: relative;
-    display: inline-block;
-  }
-
-footer{
-margin-top: 900px;
-    position: fixed;
-
-    
+.heart {
+  font-size: 48px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-  
-  .brand-title {
-    font-size: 5rem;
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
-    padding: 0 20px;
-    line-height: 1.2; /* Satır aralığını biraz açtık */
-    z-index: 1; /* Yazıyı şeritten önde tutuyoruz */
-  }
-  
-  .slogan {
-    font-size: 1.5rem;
-    color: #333;
-    font-style: italic;
-    margin-top: 20px;
-  }
-
-/* Splash ekranı geçiş efekti */
-.splash {
-  transition: opacity 1s ease;
+.heart:hover {
+  transform: scale(1.2);
 }
 
+.splash-text {
+  display: none;
+  font-size: 32px;
+  text-shadow: 2px;
+  color: #333;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+  max-width: 80%;
+}
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
 
-
-  
+footer {
+  position: absolute;
+  bottom: 20px; /* Splash ekranının en altına yerleştir */
+  color: #333;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  display: none; /* Başlangıçta gizle */
+}
