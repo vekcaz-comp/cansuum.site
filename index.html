@@ -4,68 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cansum</title>
-  <!-- CSS Dosyasını Bağla -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Splash Ekranı -->
-  <div class="splash" id="splash">
-    <div class="heart" id="heart">❤️</div>
+ <!-- Splash Ekranı -->
+ <div class="splash" id="splash">
+  <div class="heart" id="heart">❤️</div>
+  <div class="splash-text" id="splashText">
+          Merak etme, kalp gitti ama müzik başladı bile.
+  </div>
+  <!-- Footer kısmı splash ekranında, background'suz -->
+  <footer id="footer">
+    <p>&copy; 2025 Tüm hakları saklıdır. Can.</p>
+  </footer>
+</div>
+
+
+  
+    <!-- Müzik -->
+    <audio id="bg-music" autoplay loop muted>
+      <source src="gozlerin.mp3" type="audio/mpeg">
+      Tarayıcınız audio etiketini desteklemiyor.
+    </audio>
   </div>
 
-  <div class="main" id="main" style="display: none;">
-    <p class="paragraf" id="paragraf">
- </p>
-      
-
-  <!-- Müzik -->
-  <audio id="bg-music" autoplay loop muted>
-    <source src="gozlerin.mp3" type="audio/mpeg">
-    Tarayıcınız audio etiketini desteklemiyor.
-  </audio>
-
-  <!-- JS -->
-  <script>
-   const heart = document.getElementById('heart');
-const splash = document.getElementById('splash');
-const main = document.getElementById('main');
-
-const music = document.getElementById('bg-music');
-
-
-    heart.addEventListener('click', () => {
-      // Müzik sesini aç
-      music.muted = false;
-      music.play();
-
-   const heart = document.getElementById('heart');
-const splash = document.getElementById('splash');
-const main = document.getElementById('main');
-const footer = document.getElementById('footer'); // ← BU ÇOK ÖNEMLİ
-const music = document.getElementById('bg-music');
-
-heart.addEventListener('click', () => {
-  music.muted = false;
-  music.play();
-
-  splash.style.opacity = '0';
-  splash.style.pointerEvents = 'none';
-
-  setTimeout(() => {
-    splash.style.display = 'none';
-    main.style.display = 'block';
-    footer.style.display = 'block'; // ← FOOTER'I GÖSTER
-  }, 1000);
-});
-  </script>
-
-
+  <!-- Footer -->
+  <footer id="footer" style="display: none;">
+    <p>&copy; 2025 Tüm hakları saklıdır. Can.</p>
+  </footer>
+  
  
+  <!-- Script -->
+  <script src="script.js"></script>
 </body>
 
-<footer>
-  <p>&copy; 2025 Tüm hakları saklıdır. Can. </p>
-</footer>
-
+</body>
 </html>
