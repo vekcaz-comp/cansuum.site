@@ -39,16 +39,24 @@ const music = document.getElementById('bg-music');
       music.muted = false;
       music.play();
 
-       // Splash ekranını gizle
+   const heart = document.getElementById('heart');
+const splash = document.getElementById('splash');
+const main = document.getElementById('main');
+const footer = document.getElementById('footer'); // ← BU ÇOK ÖNEMLİ
+const music = document.getElementById('bg-music');
+
+heart.addEventListener('click', () => {
+  music.muted = false;
+  music.play();
+
   splash.style.opacity = '0';
   splash.style.pointerEvents = 'none';
 
-  // Main ve Footer'ı göster
   setTimeout(() => {
     splash.style.display = 'none';
     main.style.display = 'block';
-    footer.style.display = 'block';
-  }, 1000); // animasyon süresi
+    footer.style.display = 'block'; // ← FOOTER'I GÖSTER
+  }, 1000);
 });
   </script>
 
