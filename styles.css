@@ -66,6 +66,12 @@ margin-top: 900px;
     margin-top: 20px;
   }
 
+/* Splash ekranı geçiş efekti */
+.splash {
+  transition: opacity 1s ease;
+}
+
+
 
 
   
