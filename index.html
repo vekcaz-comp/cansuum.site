@@ -12,14 +12,34 @@
   <!-- Splash Ekranı -->
   <div class="splash" id="splash">
     <div class="heart" id="heart">❤️</div>
-      
   </div>
 
-
-  <!-- İçerik -->
-  
   <!-- Müzik -->
-  
+  <audio id="bg-music" autoplay loop muted>
+    <source src="music.mp3" type="audio/mpeg">
+    Tarayıcınız audio etiketini desteklemiyor.
+  </audio>
+
+  <!-- JS -->
+  <script>
+    const heart = document.getElementById('heart');
+    const splash = document.getElementById('splash');
+    const music = document.getElementById('bg-music');
+
+    heart.addEventListener('click', () => {
+      // Müzik sesini aç
+      music.muted = false;
+      music.play();
+
+      // Splash ekranını gizle (yumuşak geçiş)
+      splash.style.opacity = '0';
+      splash.style.pointerEvents = 'none';
+      setTimeout(() => {
+        splash.style.display = 'none';
+      }, 1000); // animasyon için zaman (1 saniye)
+    });
+  </script>
+
 
  
 </body>
