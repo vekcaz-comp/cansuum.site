@@ -14,7 +14,7 @@
     <div class="heart" id="heart">❤️</div>
   </div>
 
-  <div class="main" id="main">
+  <div class="main" id="main" style="display: none;">
     <p class="paragraf" id="paragraf">
  </p>
       
@@ -27,22 +27,29 @@
 
   <!-- JS -->
   <script>
-    const heart = document.getElementById('heart');
-    const splash = document.getElementById('splash');
-    const music = document.getElementById('bg-music');
+   const heart = document.getElementById('heart');
+const splash = document.getElementById('splash');
+const main = document.getElementById('main');
+const footer = document.getElementById('footer');
+const music = document.getElementById('bg-music');
+
 
     heart.addEventListener('click', () => {
       // Müzik sesini aç
       music.muted = false;
       music.play();
 
-      // Splash ekranını gizle (yumuşak geçiş)
-      splash.style.opacity = '0';
-      splash.style.pointerEvents = 'none';
-      setTimeout(() => {
-        splash.style.display = 'none';
-      }, 1000); // animasyon için zaman (1 saniye)
-    });
+       // Splash ekranını gizle
+  splash.style.opacity = '0';
+  splash.style.pointerEvents = 'none';
+
+  // Main ve Footer'ı göster
+  setTimeout(() => {
+    splash.style.display = 'none';
+    main.style.display = 'block';
+    footer.style.display = 'block';
+  }, 1000); // animasyon süresi
+});
   </script>
 
 
